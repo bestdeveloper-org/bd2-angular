@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter/counter.component';
 import { ButtonComponent } from './counter/button/button.component';
+import { CreateUserComponent } from './user/create-user/create-user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
-    ButtonComponent
+    ButtonComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule
