@@ -18,7 +18,7 @@ export class CounterComponent implements OnInit {
   }
 
   dataToPass = {
-    onClick: this.increment.bind(this);
+    onClick: this.increment.bind(this)
   };
 
 

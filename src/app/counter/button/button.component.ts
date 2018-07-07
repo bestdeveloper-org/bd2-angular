@@ -7,7 +7,7 @@ import {Component, OnInit, Input} from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-  @Input() data: number;
+  @Input() data: any;
 
   constructor() { }
 
