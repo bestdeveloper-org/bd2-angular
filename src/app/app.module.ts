@@ -7,6 +7,7 @@ import { CounterComponent } from './counter/counter/counter.component';
 import { ButtonComponent } from './counter/button/button.component';
 import { CreateUserComponent } from './user/create-user/create-user.component';
 import { CreateUserV1Component } from './user/create-user-v1/create-user-v1.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,6 +15,7 @@ import { CreateUserV1Component } from './user/create-user-v1/create-user-v1.comp
     ButtonComponent,
     CreateUserComponent,
     CreateUserV1Component,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule
