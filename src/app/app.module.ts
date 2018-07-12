@@ -9,6 +9,7 @@ import { CreateUserComponent } from './user/create-user/create-user.component';
 import { CreateUserV1Component } from './user/create-user-v1/create-user-v1.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AppRoutingModule } from './app-routing.module';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

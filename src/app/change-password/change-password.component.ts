@@ -9,6 +9,9 @@ export class ChangePasswordComponent implements OnInit {
 
   constructor() { }
 
+  hero: any = {};
+
+
   ngOnInit() {
   }
 
