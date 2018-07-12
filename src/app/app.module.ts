@@ -8,6 +8,8 @@ import { ButtonComponent } from './counter/button/button.component';
 import { CreateUserComponent } from './user/create-user/create-user.component';
 import { CreateUserV1Component } from './user/create-user-v1/create-user-v1.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     ChangePasswordComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
