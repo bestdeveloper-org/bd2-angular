@@ -10,7 +10,12 @@ export class ChangePasswordComponent implements OnInit {
 
   constructor() { }
 
-  hero: any = {};
+  hero: any = {
+    roata: {
+      culoare: ''
+    }
+  };
+
   @ViewChild('heroForm') currentForm: NgForm;
 
   onChangePassword() {
