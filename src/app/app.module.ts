@@ -1,4 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
+;
+import { ProductComponent } from './product/product.component'import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
@@ -19,6 +20,7 @@ import {FormsModule} from "@angular/forms";
     CreateUserComponent,
     CreateUserV1Component,
     ChangePasswordComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

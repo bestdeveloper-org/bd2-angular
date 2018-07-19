@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let product of state.product">
+  <span class="badge">{{product.id}}</span> {{product.name}}
+</li>
+</ul>
+<div>
+  <button type="button" class="btn btn-primary" (click)="add()">ADD</button>
+</div>
+<input type="text" id="name" [(ngModel)]="state.name"/>

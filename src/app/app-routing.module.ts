@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from "@angular/router";
 import {CreateUserV1Component} from "./user/create-user-v1/create-user-v1.component";
 import {ChangePasswordComponent} from "./change-password/change-password.component";
+import {ProductComponent} from "./product/product.component";
 
 const routes: Routes = [
   { path: 'user/create', component: CreateUserV1Component },
-  { path: 'user/changePassword', component: ChangePasswordComponent }
+  { path: 'user/changePassword', component: ChangePasswordComponent },
+  { path: 'user/product', component: ProductComponent },
 
 ];
 
