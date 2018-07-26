@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpService} from "../services/http.service";
 
 @Component({
   selector: 'app-product',
@@ -7,18 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
 
   state:any={
     product:[],
     name:"",
-    error:""
+    error:"",
+    srv: null
   };
 
-  ngOnInit() {
-  
+  async ngOnInit() {
+
     this.state.product.push({id:1, name:'Varza'});
     this.state.product.push({id:2, name:'Televizor'});
+
+     this.state.srv = await this.httpService.getJson('');
+
   }
    add () {
    // const exist=this.state.product.find(el=>el.name==this.state.name);
@@ -38,7 +43,7 @@ export class ProductComponent implements OnInit {
      }
      else  {
     this.state.product.push({id:this.state.product.length+1, name:this.state.name});
-    this.state.name=""; 
+    this.state.name="";
      }
    }
   }

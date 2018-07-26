@@ -1,3 +1,4 @@
+import {HttpService} from "./services/http.service";
 ;
 import { ProductComponent } from './product/product.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +13,7 @@ import { CreateUserV1Component } from './user/create-user-v1/create-user-v1.comp
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -26,9 +28,10 @@ import {FormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
