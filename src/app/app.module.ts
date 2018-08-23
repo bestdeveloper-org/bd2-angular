@@ -17,6 +17,8 @@ import {HttpModule} from "@angular/http";
 import {PubSubService} from "./services/pubsub/pubsub";
 import { Obs1Component } from './observer/obs1/obs1.component';
 import { Obs2Component } from './observer/obs2/obs2.component';
+import { HeaderComponent } from './header/header.component';
+import { LoginComponent } from './user/login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { Obs2Component } from './observer/obs2/obs2.component';
     ProductComponent,
     Obs1Component,
     Obs2Component,
+    HeaderComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
