@@ -7,12 +7,13 @@ import {ProductComponent} from "./product/product.component";
 import {LoginComponent} from "./user/login/login.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {HomeComponent} from "./home/home.component";
+import {AuthGuard} from "./services/auth-guard.service";
 
 const routes: Routes = [
   { path: '', component: HomeComponent,pathMatch: 'full' },
   { path: 'user/create', component: CreateUserV1Component },
   { path: 'user/changePassword', component: ChangePasswordComponent },
-  { path: 'user/product', component: ProductComponent },
+  { path: 'user/product', component: ProductComponent,canActivate: [AuthGuard], },
   { path: 'user/login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponent }
 
