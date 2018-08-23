@@ -5,12 +5,17 @@ import {CreateUserV1Component} from "./user/create-user-v1/create-user-v1.compon
 import {ChangePasswordComponent} from "./change-password/change-password.component";
 import {ProductComponent} from "./product/product.component";
 import {LoginComponent} from "./user/login/login.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
+  { path: '', component: HomeComponent,pathMatch: 'full' },
   { path: 'user/create', component: CreateUserV1Component },
   { path: 'user/changePassword', component: ChangePasswordComponent },
   { path: 'user/product', component: ProductComponent },
   { path: 'user/login', component: LoginComponent },
+  { path: '**', component: PageNotFoundComponent }
+
 ];
 
 @NgModule({

@@ -1,3 +1,12 @@
-<p>
+<p *ngIf="login">
   {{login.user}}
 </p>
+<nav>
+  <a routerLink="/user/create">create</a>
+
+
+  <a routerLink="user/changePassword">change password</a>
+  <a routerLink="user/product">Product</a>
+  <a routerLink="user/login" *ngIf="!login">Login</a>
+  <a (click)="logout()" *ngIf="login">Logout</a>
+</nav>

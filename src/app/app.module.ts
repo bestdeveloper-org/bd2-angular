@@ -19,6 +19,9 @@ import { Obs1Component } from './observer/obs1/obs1.component';
 import { Obs2Component } from './observer/obs2/obs2.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './user/login/login.component';
+import { LocalStorageModule } from 'angular-2-local-storage';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +36,18 @@ import { LoginComponent } from './user/login/login.component';
     Obs2Component,
     HeaderComponent,
     LoginComponent,
+    PageNotFoundComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    LocalStorageModule.withConfig({
+      prefix: 'my-app',
+      storageType: 'localStorage'
+    })
   ],
   providers: [HttpService, PubSubService],
   bootstrap: [AppComponent]
