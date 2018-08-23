@@ -14,6 +14,9 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
+import {PubSubService} from "./services/pubsub/pubsub";
+import { Obs1Component } from './observer/obs1/obs1.component';
+import { Obs2Component } from './observer/obs2/obs2.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import {HttpModule} from "@angular/http";
     CreateUserV1Component,
     ChangePasswordComponent,
     ProductComponent,
+    Obs1Component,
+    Obs2Component,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,7 @@ import {HttpModule} from "@angular/http";
     FormsModule,
     HttpModule
   ],
-  providers: [HttpService],
+  providers: [HttpService, PubSubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

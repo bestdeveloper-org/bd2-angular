@@ -8,7 +8,7 @@ export class HttpService {
 
   constructor(private http: Http) { }
 
-  const baseUrl = "http://localhost:4001/"
+  baseUrl = "http://localhost:4001/";
   async getJson(url): Promise<any> {
     const serverRoute = `${this.baseUrl}${url}`
     try {
